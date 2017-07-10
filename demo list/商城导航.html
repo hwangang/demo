@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东左侧导航</title>
+    <link rel="stylesheet" type="text/css" href="css/京东左侧导航.css">
+    <script>
+        window.onload = function(){
+        var aLists=document.getElementsByTagName('li');
+        var aMenus=document.getElementsByClassName('submenu');
+
+        for (var i = 0; i < aLists.length; i++) {
+            aLists[i].index=i;
+            aLists[i].onmouseover = function(){
+                this.className = 'item-hover';
+                aMenus[this.index].style.display='block';
+            }
+            aLists[i].onmouseout = function(){
+                this.className = "item";
+                aMenus[this.index].style.display='none';
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+<div class="topnav">
+    <div class="title">
+        <a href="#">全部商品分类</a>
+    </div>
+</div>
+<div class="menu">
+    <ul class="navmenu">
+        <li class="item">
+            <a href="#">家用电器</a>
+            <span class="lefticon">&gt;</span>
+            <div class="submenu clear">
+                <div class="leftmenu">
+                    <dl class="toptitle clear">
+                        <dd><a href="#">玩3C</a><span>&gt;</span></dd>
+                        <dd><a href="#">本周热卖</a><span>&gt;</span></dd>
+                        <dd><a href="#">游戏部落</a><span>&gt;</span></dd>
+                        <dd><a href="#">GAME+</a><span>&gt;</span></dd>
+                        <dd><a href="#">装机大师</a><span>&gt;</span></dd>
+                        <dd><a href="#">办公生活馆</a><span>&gt;</span></dd>
+                    </dl>
+                    <dl class="clear">
+                        <dt><a class="clear" href="#">电脑整机<span>&gt;</span></a></dt>
+                        <dd>
+                            <a href="#">游戏机</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">服务器/工作站</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="clear">
+                        <dt><a href="#">服装<span>&gt;</span></a></dt>
+                        <dd>
+                            <a href="#">笔记本</a><a href="#">游戏机</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">服务器/工作站</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="clear">
+                        <dt><a href="#">服装<span>&gt;</span></a></dt>
+                        <dd>
+                            <a href="#">笔记本</a><a href="#">游戏机</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">服务器/工作站</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="clear">
+                        <dt><a href="#">服装<span>&gt;</span></a></dt>
+                        <dd>
+                            <a href="#">笔记本</a><a href="#">游戏机</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">服务器/工作站</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="clear">
+                        <dt><a href="#">服装<span>&gt;</span></a></dt>
+                        <dd>
+                            <a href="#">笔记本</a><a href="#">游戏机</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">服务器/工作站</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="clear">
+                        <dt><a href="#">服装<span>&gt;</span></a></dt>
+                        <dd>
+                            <a href="#">笔记本</a><a href="#">游戏机</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">服务器/工作站</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="clear">
+                        <dt><a href="#">服装<span>&gt;</span></a></dt>
+                        <dd>
+                            <a href="#">笔记本</a><a href="#">游戏机</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">服务器/工作站</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="clear">
+                        <dt><a href="#">服装<span>&gt;</span></a></dt>
+                        <dd>
+                            <a href="#">笔记本</a><a href="#">游戏机</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">服务器/工作站</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="ads">
+                    <img src="images/ads.png">
+                </div>
+            </div>
+        </li>
+        <li class="item">
+            <a href="#">手机、数码、京东通信</a>
+            <span class="lefticon">&gt;</span>
+            <div class="submenu clear">
+                <div class="leftmenu">
+                    <dl class="toptitle clear">
+                        <dd><a href="#">体验区1</a><span>&gt;</span></dd>
+                        <dd><a href="#">体验区2</a><span>&gt;</span></dd>
+                        <dd><a href="#">体验区3</a><span>&gt;</span></dd>
+                        <dd><a href="#">体验区13</a><span>&gt;</span></dd>
+                        <dd><a href="#">体验区4</a><span>&gt;</span></dd>
+                        <dd><a href="#">体验区5</a><span>&gt;</span></dd>
+                    </dl>
+                    <dl class="clear">
+                        <dt><a class="clear" href="#">电脑整机<span>&gt;</span></a></dt>
+                        <dd>
+                            <a href="#">游戏机</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">服务器/工作站</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="clear">
+                        <dt><a href="#">服装<span>&gt;</span></a></dt>
+                        <dd>
+                            <a href="#">笔记本</a><a href="#">游戏机</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">服务器/工作站</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="clear">
+                        <dt><a href="#">服装<span>&gt;</span></a></dt>
+                        <dd>
+                            <a href="#">笔记本</a><a href="#">游戏机</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">服务器/工作站</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="clear">
+                        <dt><a href="#">服装<span>&gt;</span></a></dt>
+                        <dd>
+                            <a href="#">笔记本</a><a href="#">游戏机</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">服务器/工作站</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                     <dl class="clear">
+                        <dt><a href="#">服装<span>&gt;</span></a></dt>
+                        <dd>
+                            <a href="#">笔记本</a><a href="#">游戏机</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">服务器/工作站</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="clear">
+                        <dt><a href="#">服装<span>&gt;</span></a></dt>
+                        <dd>
+                            <a href="#">笔记本</a><a href="#">游戏机</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">服务器/工作站</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                    <dl class="clear">
+                        <dt><a href="#">服装<span>&gt;</span></a></dt>
+                        <dd>
+                            <a href="#">笔记本</a><a href="#">游戏机</a><a href="#">平板电脑</a><a href="#">平板电脑配件</a><a href="#">台式机</a><a href="#">一体机</a><a href="#">服务器/工作站</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a><a href="#">笔记本配件</a>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="ads">
+                    <img src="images/ads.png">
+                </div>
+            </div>
+        </li>
+        <li class="item"><a href="#">电脑、办公</a><span class="lefticon">&gt;</span></li>
+        <li class="item"><a href="#">家居、家具、家装、厨具</a><span class="lefticon">&gt;</span></li>
+        <li class="item"><a href="#">男装、女装、童装、内衣</a><span class="lefticon">&gt;</span></li>
+        <li class="item"><a href="#">个性化妆、清洁用品、宠物</a><span class="lefticon">&gt;</span></li>
+        <li class="item"><a href="#">鞋靴、箱包、珠宝、奢侈品</a><span class="lefticon">&gt;</span></li>
+        <li class="item"><a href="#">运动、户外、钟表</a><span class="lefticon">&gt;</span></li>
+        <li class="item"><a href="#">汽车、汽车用品</a><span class="lefticon">&gt;</span></li>
+        <li class="item"><a href="#">母婴、玩具乐器</a><span class="lefticon">&gt;</span></li>
+        <li class="item"><a href="#">食品、酒类、生鲜、特产</a><span class="lefticon">&gt;</span></li>
+        <li class="item"><a href="#">医药保健</a><span class="lefticon">&gt;</span></li>
+        <li class="item"><a href="#">图书、音像、电子书</a><span class="lefticon">&gt;</span></li>
+        <li class="item"><a href="#">彩票、旅行、充值、票务</a><span class="lefticon">&gt;</span></li>
+        <li class="item"><a href="#">理财、众筹、白条、保险</a><span class="lefticon">&gt;</span></li>
+    </ul>
+
+
+</div>
+
+</body>
+</html>

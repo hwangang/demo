@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "microsoft yahei";
+}
+a{
+    text-decoration: none;
+}
+/*清除浮动*/
+.clear{zoom:1;}
+.clear:after{content:''; display:block; clear:both;}
+
+.topnav{
+    width: 100%;
+    border-bottom: 2px solid #B1191A;
+}
+.topnav .title{
+    width: 211px;
+    height: 44px;
+    background: #B1191A;
+}
+.topnav .title a{
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    margin-left: 8px;
+    font-size: 15px;
+    color: #fff;
+}
+.menu{
+
+    position: relative;
+}
+.menu .navmenu{
+    width: 210px;
+    border-left: 1px solid #C81623;
+    border-bottom: 1px solid #C81623;
+    position: relative;
+    z-index: 400;
+}
+.menu .navmenu .item{
+    background: #C81623;
+    height: 34px;
+    padding-right: 8px;
+}
+.menu .navmenu .item-hover{
+    background: #fff;
+    height: 34px;
+    padding-right: 8px;
+}
+.menu .navmenu .item > a{
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    color: #fff;
+    margin-left: 8px;
+}
+.menu .navmenu .item-hover > a{
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    color: #C81623;
+    margin-left: 8px;
+}
+.menu .navmenu .lefticon{
+    color: #fff;
+    float: right;
+    font-size: 10px;
+    height: 34px;
+    line-height: 34px;
+}
+.menu .submenu{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 210px;
+    width: 1000px;
+    background: #F7F7F7;
+    height: auto;
+    border: 1px solid #C81623;
+    border-top: none;
+    padding: 20px;
+    z-index: 300;
+}
+.menu .submenu .leftmenu{
+    width: 700px;
+    float: left;
+}
+.leftmenu dl{
+    border-bottom: 1px solid #EEE;
+    overflow: hidden;
+}
+.leftmenu .toptitle dd{
+    height:24px;
+    background: #7C7171;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.leftmenu .toptitle dd a{
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    font-size: 13px;
+    color: #fff;
+    margin: 0 6px 0 6px;
+}
+.leftmenu .toptitle dd span{
+    float: right;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    color: #fff;
+}
+.leftmenu .toptitle dd:hover{
+    background: #C81623;
+}
+.leftmenu dl>dt{
+    width: 80px;
+    padding: 8px 0 8px 0;
+}
+.leftmenu dl>dt,dt+dd{
+    max-width: 600px;
+    float: left;
+}
+.leftmenu dt+dd{
+    padding-bottom: 8px;
+}
+.leftmenu dl dt a{
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    height: 18px;
+    line-height: 18px;
+    color: #666;
+    margin-right: 8px;
+    float: right;
+}
+.leftmenu dl dt a span{
+    margin-left: 8px;
+}
+.leftmenu dl dt+dd a{
+    height: 18px;
+    line-height: 18px;
+    padding: 0 8px 0 8px;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #666;
+    border-left: 1px solid #e0e0e0;
+    float: left;
+}
+.leftmenu dt a:hover{
+    color: #C81623;
+}
+.leftmenu dl dt+dd a:hover{
+    color: #C81623;
+}
+.ads{
+    float: right;
+}
+

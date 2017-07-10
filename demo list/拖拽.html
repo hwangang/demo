@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>百度登录-鼠标拖拽</title>
+    <style>
+        .show {width: 80px;margin:100px auto;}
+        #container{width: 300px;height: 400px;border:1px solid #ccc;z-index: 9000;display: none;position: absolute;top: 0;left: 0;background-color: #fff;}
+        #title{height: 40px;background-color: #ccc;}
+        #title a{display: block;float: right;text-decoration: none;margin-right: 20px;line-height: 40px;color: grey;}
+        #back{width: 100%;height:100%;background: #000;display: none;position: absolute;top: 0px;left: 0px;z-index: 8000;opacity:0.4; filter: Alpha(opacity=40);
+}
+    </style>
+</head>
+<body>
+<div class="show">
+    <a href="javascript:showContainer();">弹出</a>
+</div>
+<div id="back"></div>
+<div id="container">
+    <div id="title">
+        <a href="javascript:hideContainer();">关闭</a>
+    </div>
+</div>
+</div>
+</div>
+<script src="js/鼠标拖拽.js"></script>
+</body>
+</html>

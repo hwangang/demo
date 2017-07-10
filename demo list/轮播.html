@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>焦点轮播图</title>
+    <link rel="stylesheet" type="text/css" href="css/js轮播图.css">
+    <script type="text/javascript">
+        window.onload = function () {
+            var oContainer = document.getElementById('container');
+            var oList = document.getElementById('list');
+            var aButtons = document.getElementById('buttons').getElementsByTagName('span');
+            var oPrev = document.getElementById('prev');
+            var oNext = document.getElementById('next');
+            var index=1;
+            var animated=false; //初始动画没有切换
+            var timer;
+
+            //点亮小圆点
+            function showButton() {
+                for (var i = 0; i < aButtons.length; i++) {
+                    aButtons[i].className='';
+                }
+                aButtons[index-1].className='on';
+            }
+
+            //通过偏移量计算切换到哪一张图片
+            function animate(offset) {
+                animated=true; //动画在切换
+                var newLeft=oList.offsetLeft+offset;
+                var time=300; //位移总时间
+                var interval=10; //位移间隔时间
+                var speed=offset/(time/interval); //每次的位移量
+
+                function go() {
+                    if ((speed<0 && oList.offsetLeft>newLeft) || (speed>0 && oList.offsetLeft<newLeft)){
+                        oList.style.left=oList.offsetLeft+speed+'px';
+                        setTimeout(go,interval);
+                    }
+                    else{
+                        animated=false; //切换完成
+                        oList.style.left=newLeft+'px';
+                        if(newLeft>-600){
+                            oList.style.left=-3000+'px';
+                        }
+                        if (newLeft<-3000){
+                            oList.style.left=-600+'px';
+                        }
+                    }
+                }
+                go();
+            }
+
+            function autoPlay() {
+                timer=setInterval(function() {
+                    oNext.onclick();
+                },3000);
+            }
+            function stop() {
+                clearInterval(timer);
+            }
+
+            //点击向右箭头
+            oNext.onclick=function() {
+                if (animated==false) {
+                    if (index==5) {
+                        index=1;
+                    }
+                    else{
+                        index+=1;
+                    }
+                    showButton();
+                    animate(-600);
+                }
+            }
+            //点击向左箭头
+            oPrev.onclick=function() {
+                if(animated==false){
+                    if (index==1) {
+                        index=5;
+                    }
+                    else{
+                        index-=1;
+                    }
+                    showButton();
+                    animate(600);
+                }
+            }
+            //点击小圆点切换
+            for (var i = 0; i <aButtons.length; i++) {
+                aButtons[i].onclick=function() {
+                    if (this.className=='on') {
+                        return;
+                    } //点击当前不执行后续代码
+                    var myIndex=parseInt(this.getAttribute('index')); //获取要切换到的index值
+                    var offset=-600*(myIndex-index); //计算切换的偏移量
+                    //不在切换状态则切换
+                    if (animated==false) {
+                        animate(offset);
+                    }
+                    index=myIndex; //更新切换后的index值
+                    showButton();
+                }
+            }
+
+            oContainer.onmouseover=stop;
+            oContainer.onmouseout=autoPlay;
+
+            autoPlay();
+
+        }
+    </script>
+</head>
+<body>
+
+<div id="container">
+    <div id="list" style="left:-600px;">
+        <img src="images/55.png" alt="5"/>
+        <img src="images/11.png" alt="1"/>
+        <img src="images/22.png" alt="2"/>
+        <img src="images/33.png" alt="3"/>
+        <img src="images/44.png" alt="4"/>
+        <img src="images/55.png" alt="5"/>
+        <img src="images/11.png" alt="1"/>
+    </div>
+    <div id="buttons">
+        <span index="1" class="on"></span>
+        <span index="2"></span>
+        <span index="3"></span>
+        <span index="4"></span>
+        <span index="5"></span>
+    </div>
+    <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+    <a href="javascript:;" id="next" class="arrow">&gt;</a>
+</div>
+
+</body>
+</html>
